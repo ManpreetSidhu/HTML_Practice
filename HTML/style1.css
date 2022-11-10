@@ -1,0 +1,30 @@
+.h1{
+	font-size:5vw;
+	font-family:Ariel;
+    margin-left:20%;
+	
+}
+.div1{
+	border:0px solid black;
+	width:auto;
+	background-image: url('Images/contactpage.jpg');
+	height:450px;
+	background-size:cover;
+}
+.div2{
+	border: 0px solid black;
+	margin-top:2%;
+	font-size:1.5vw;
+	
+}
+.p1{
+	margin-left:20%;
+}
+.btn-facebook {
+    background-color: #405D9D;
+    color: #fff;
+}
+.btn-twitter {
+    background-color: #42AEEC;
+    color: #fff;
+}
