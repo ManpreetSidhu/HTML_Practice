@@ -1,44 +1,142 @@
 <! DOCTYPE html>
 <html>
 	<head>
-		<style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style1.css">
+	<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+	
+	<style>
+.mySlides {display:none;
+width:90%;height:60%}
 	
 	table, th, td {
   border:0px solid black;
  margin-left:auto;margin-right:auto;
 }
 		
-
-
 		</style>
-		<body style="background-color:#fefbd8">
-			<table style="margin-left:auto;margin-right:auto">
+	
+		<body style="background-color:#f5deb3">
+			<table style="float:left">
 				<tr>
 			
 					<td><img src="TRAVEL logo.jpg"
-						alt="logo travel agency" style="height:100px;width:100px"></td>
-					<td><h1>WELCOME TO THE TRAVEL EXPERTS</h1></td>
-				</tr>
+						alt="logo travel agency" style="height:40px;width:40px"></td>
+					<td><h3>WELCOME TO THE TRAVEL EXPERTS</h3></td>
+					
 				
-			</table>
-				<h3 style="text-align:Center;font-size:30px"> TRAVEL MORE AND DISCOVER WORLD</h3>
-			<table>
-				<tr>
-					<td ><img src="Images\Image1.jpg"
-						alt="Travel Images" style="height:200px;width:200px;border-radius:20px"></td>
-					<td><img src="Images\Image2.jpg"
-						alt="Travel Images" style="height:200px;width:200px;border-radius:20px"></td>
-					<td><img src="Images\Image3.jpg"
-						alt="Travel Images" style="height:200px;width:200px;border-radius:20px"></td>
-					<td><img src="Images\Image4.jpg"
-						alt="Travel Images" style="height:200px;width:200px;border-radius:20px"></td>
-					<td><img src="Images\Image5.jpg"
-						alt="Travel Images" style="height:200px;width:200px;border-radius:20px"></td>
-					<td><img src="Images\Image6.jpg"
-						alt="Travel Images" style="height:200px;width:200px;border-radius:20px"></td>
 				</tr>
-			</table>
+			</table></br></br>
+			<ul class="ul">
+  <li class="li"><a href="index.html">Home</a></li>
+  <li class="li"><a href="contact.html">Contact</a></li>
+  <li class="li"><a href="Register.html">Register</a></li>
+  <li class="li" style="float:right"><a class="active" href="#about">About</a></li>
+</ul></br>
+			<div style="border:2px solid black;margin-top:1%">
+				<h3 class="h3"> DISCOVER the world</h3>
+				<h4 style="text-align:center"> We travel not to escape life BUT for life to escape us.</h4></div>
+			<!--<table>
+				<tr>
+					<td ><img class="img1" src="Images\Image1.jpg"
+						alt="Travel Images" style="	"></td>
+					<td><img class="img1" src="Images\Image2.jpg"
+						alt="Travel Images" ></td>
+					<td><img class="img1" src="Images\Image3.jpg"
+						alt="Travel Images" ></td>
+					<td><img class="img1" src="Images\Image4.jpg"
+						alt="Travel Images" ></td>
+					<td><img class="img1" src="Images\Image5.jpg"
+						alt="Travel Images"></td>
+					<td><img class="img1" src="Images\Image6.jpg"
+						alt="Travel Images" ></td>
+						
+				</tr>
+			
+			</table> --->
+			<div style="margin-left:13vw;margin-top:20px">
+  <img class="mySlides" src="Images\Image1.jpg" >
+  <img class="mySlides" src="Images\Image2.jpg">
+  <img class="mySlides" src="Images\Image3.jpg">
+  <img class="mySlides" src="Images\Image4.jpg">
+  <img class="mySlides" src="Images\Image5.jpg">
+  <img class="mySlides" src="Images\Image6.jpg">
+</div>
+			<script>
+var myIndex = 0;
+Slideshow();
+
+function Slideshow() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(Slideshow, 2000); // Change image every 2 seconds
+}
+
+</script>	
 			<br/>
+			
+			<div >
+			
+			<h4>Hover Images to find More Information.</h4>
+			<form>
+			<label>
+					Destination Name
+					<input id="destination_name" type="text" placeholder="destination_name"/>
+				</label>
+				<label>
+					Start
+					<input type="date" id="start" />
+				</label>
+				<label>
+					End
+					<input id="end" type="Date" />
+				</label>
+				Price
+					<input type="number" id="price" placeholder="Price ($)" />
+				</label>
+				<label>
+				<button type="button">Search</button>
+				</form>
+				</div>
+				<table>
+				<tr>
+					<td > <div class="example"><img src="Images\arizona.jpg"
+						alt="Travel Images"  style="height:300px;width:300px">
+						<div class="content">
+						<div class="text">Arizona in US formed over past 2 billion years.</div>
+						</div></div></td>
+					<td><div class="example"><img src="Images\Itlay.jpg"
+						alt="Travel Images" style="height:300px;width:300px">
+						<div class="content">
+						<div class="text">This is a view of Rome in Itlay.</div>
+						</div></div>
+						</td>
+					<td> <div class="example"><img src="Images\newzealand.jpg"
+						alt="Travel Images" style="height:300px;width:300px" >
+						<div class="content">
+						<div class="text">Lake in Newzealand.</div>
+						</div></div>
+						</td>
+					<td> <div class="example"><img src="Images\banff.jpeg"
+						alt="Travel Images" style="height:300px;width:300px">
+						<div class="content">
+						<div class="text">Banff is located in alberta calgary.</div>
+						</div></div>
+						</td>
+					
+						
+				</tr>
+			
+			</table>
+		
+				
 			<div style="margin-top:50px">
 			<table>
 				<tr>
@@ -50,8 +148,85 @@
 				</tr>
 				
 			</table>
-			</div
-			<footer>Copyright &copy; 2022 Manpreet Sidhu</footer>
+			</div>
+		
+			<script>
+			
+			var description=["Taj Mahal - white marble mausoleum on the river of Yamuna","Stewart Island in Newzealand to explore wild side of newzealand",
+	"Banff Canada - it is in alberta with nature beauty","City of Mexico"];
+			
+			var images = [
+        "Image1.jpg","Image2.jpg","Image3.jpg",
+           "Image4.jpg"]
+		   
+
+			var destURLs =["https://en.wikipedia.org/wiki/Taj_Mahal","https://en.wikipedia.org/wiki/Stewart_Island","https://en.wikipedia.org/wiki/Banff,_Alberta","https://en.wikipedia.org/wiki/Palacio_de_Bellas_Artes"];
+			
+			
+			function showDescription(index){
+				var window = open(destURLs[index],"","height:500px;width:500px");
+				setTimeout(function(){ window.close();},3000);
+			}
+			</script>
+			
+			
+			
+			
+	<div id="dispaly">Display Images and Description
+		<table>
+			<script>
+			for(i=0;i<images.length;i++){
+				document.write("<tr>");
+				document.write("<td><img style='height:200px;width:200px'src='"+images[i]+"'/></td>");
+				document.write("<td onclick='showDescription("+i+")'>"+description[i]+"</td>");
+				document.write("</tr>");
+			
+			}
+						
+			
+			
+			
+			
+			</script>
+		
+		
+		</table>
+	
+	
+	</div>  
+
+<script>
+/*   
+//another way todisplay images from an array 
+ (function() {
+	var description=["Taj Mahal - white marble mausoleum on the river of Yamuna","Stewart Island in Newzealand to explore wild side of newzealand",
+	"Banff Canada - it is in alberta with nature beauty","City of Mexico"];
+ 
+	  var images = [
+        "Image1.jpg","Image2.jpg","Image3.jpg",
+           "Image4.jpg"], columns = 5, i,j,
+        table = document.createElement('table'),
+        tbody = table.appendChild(document.createElement('tbody')),
+        tr, td, img;
+        for( i=0; i<images.length; i++) {
+		
+            if( i % columns == 0) tr = tbody.appendChild(document.createElement('tr'));
+            tr.appendChild(document.createElement('td'))
+              .appendChild(document.createElement('img'))
+              .src = images[i]; 
+		}        
+		
+	 			  
+					  
+        document.body.appendChild(table);
+    })(); */
+</script>
+
+
+
+			<footer> Copyright &copy; 2022 Manpreet Sidhu</footer>
+			
+			
 		</body>
 	</head>
 </html>

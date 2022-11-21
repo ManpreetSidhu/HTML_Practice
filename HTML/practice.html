@@ -1,0 +1,83 @@
+<! DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style1.css">
+	<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	
+	
+	<script>
+	//code for timer and interval
+		var counter1=0;
+		var counter2=0;
+		var timer;
+		var interval;
+		var start1 = function()
+		{
+		counter1++;
+		$("#c1").text(counter1);
+		timer =setTimeout(start1,1000);
+		}
+		var stop1= function()
+		{
+			clearTimeout(timer);
+		}
+		
+		var start2 = function()
+		{
+			interval =setInterval(function(){
+				counter2++;
+				$("#c2").text(counter2);
+			},1000);
+		}
+		var stop2= function()
+		{
+			clearInterval(interval);
+		}
+	</script>
+	</head>
+	
+	<body>
+	<p id="c1"><p>
+	<button id="start1"> Start Recursive </button>
+	<button id="stop1"> stop Recursive </button>
+	<p id="c2"></p>
+	<button id="start2"> Start Interval </button>
+	<button id="stop2"> stop Interval </button>
+	
+	
+	<script>
+		$("#start1").click(start1);
+		$("#stop1").click(stop1);
+		$("#start2").click(start2);
+		$("#stop2").click(stop2);
+	
+	</script>
+	
+	<script>
+	// array of images.
+	var interval1;
+	var index=0;
+	var myImages=["Images\Image1.jpg","Images\Image2.jpg","Images\Image3.jpg","Images\Image4.jpg","Images\Image5.jpg"];
+	
+	</script>
+	<!--code for images to display as an array--->
+	<img id="img1" src="Images/Image1.jpg"/>
+	<button id="start">Start</button>
+	<button id="stop">stop</button>
+	
+	<script>
+		$("#start").click(function(){
+			interval1 =setInterval(function(){
+				$("#img1").prop("src",myImages[index++]);
+			},1000);
+		
+		});
+	
+		$("#stop").click(function(){
+		clearInterval(interval1);
+		});
+	</script>
+	</body>
+	</html>

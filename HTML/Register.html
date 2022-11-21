@@ -13,32 +13,69 @@
 function verifyPassword() {  
   var pw = document.getElementById("password").value;  
   var pw1 = document.getElementById("password_two").value;  
+  var fname=document.getElementById("fname").value;
   //check empty password field  
-  
+  alert("hello");
+if(fname=="")
+{
+alert("Please fill the first Name");
+fname.focus();
+}
   if(pw == "") {  
   alert("Please fill the password");
      return false;  
   }  
    
  
-  if(pw!=pw2) {  
+  if(pw!=pw1) {  
+  alert("hello244");
     alert("Passwords are not same");
     
       return false;  
-    } else {  
+    } else { 
+	
       alert ("Your password created successfully");  
-      
+      return true;
     }  
-}</script>  
+	return confirm("continue submit?");
+}
+
+function showPara(){
+
+}
+
+function hidePara(){
+
+
+}
+
+
+///regular expression postal code -/[ABCEGHJKLMNPRSTVXY][0-9][ABCEGHJKLMNPRSTVWXYZ] ?[0-9][ABCEGHJKLMNPRSTVWXYZ][0-9]/
+</script>  
+<style>
+.p{
+	position:absolute;
+	float:right;
+	width:40%;
+	right:10px;
+	visibility:visible;
+}
+</style>
 </head>
 	<body>
 	<div class="container mt-3">
   <h2>Registeration Form</h2>
+  <p class ="p" id="fnameInfo">Enter your First name here</p>
+  <p class ="p" id="lnameInfo">Enter your last name here</p>
+  <p class ="p"  id="email">Enter your Email here</p>
+  <p  id="postalcode">Enter your Postalcode here</p>
+  <p id="password">Enter your Password here</p>
   <form method="get" action="bouncer.php">
    <div class="mb-3 mt-3">
       <label for="fname">FirstName:</label>
-      <input type="text" class="form-control" id="fname" placeholder="Enter FirstName" name="fname">
-    </div>
+      <input type="text" class="form-control" id="fname" placeholder="Enter FirstName" name="fname" onfocus="showPara('fnameinfo')"
+    onblur="hidePara('fnameinfo')">
+	</div>
     <div class="mb-3">
       <label for="lname">LastName:</label>
       <input type="text" class="form-control" id="lname" placeholder="Enter Lastname" name="lname">
@@ -53,19 +90,20 @@ function verifyPassword() {
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
     </div>
     <div class="mb-3">
-      <label for="pwd">Password:</label>
+      <label for="password">Password:</label>
       <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
     </div>
 	<div class="mb-3">
-      <label for="pwd2">Re-type Password:</label>
+      <label for="password_two">Re-type Password:</label>
       <input type="password" class="form-control" id="password_two" name="password_two" placeholder="Re-type password">
     </div>
+	
     <div class="form-check mb-3">
       <label class="form-check-label">
         <input class="form-check-input" type="checkbox" name="remember"> Remember me
       </label>
     </div>
-    <button type="submit" class="btn btn-primary" onclick="verifyPassword();">Submit</button>
+    <button type="submit" class="btn btn-primary" onclick="return verifyPassword();">Submit</button>
   </form>
 </div>
 	</body>
